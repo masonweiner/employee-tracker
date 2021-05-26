@@ -8,11 +8,13 @@ const connection = require("../../config/connection");
 require("dotenv").config();
 
 router.get("/employees", (req, res) => {
-  console.log(
-    Employee.findAll().then((employeeData) => {
-      res.json(employeeData);
-    })
-  );
+  console.table(`SELECT * FROM employee`);
+  res.json();
+  // console.log(
+  //   Employee.findAll().then((employeeData) => {
+  //     res.json(employeeData);
+  //   })
+  // );
 });
 
 router.get("/roles", async (req, res) => {
